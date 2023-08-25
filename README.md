@@ -1,3 +1,6 @@
+# TBS-IDE
+如果改改标题图标，加几个内置插件就算自己做了个ide,那我上我也行
+
 # Visual Studio Code - Open Source ("Code - OSS")
 
 [![Feature Requests](https://img.shields.io/github/issues/microsoft/vscode/feature-request.svg)](https://github.com/microsoft/vscode/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc)

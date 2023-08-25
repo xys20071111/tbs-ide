@@ -830,7 +830,7 @@ export class AzureActiveDirectoryService {
 		if (!vscode.window.state.focused) {
 			const shouldStore = await new Promise((resolve, _) => {
 				// To handle the case where the window is not focused for a long time. We want to store the token
-				// at some point so that the next time they _do_ interact with VS Code, they don't have to sign in again.
+				// at some point so that the next time they _do_ interact with TBS-IDE, they don't have to sign in again.
 				const timer = setTimeout(
 					() => resolve(true),
 					// 5 hours + random extra 0-30 seconds so that each window doesn't try to store at the same time

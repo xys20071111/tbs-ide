@@ -10,7 +10,7 @@ export = new class ApiVsCodeInComments implements eslint.Rule.RuleModule {
 
 	readonly meta: eslint.Rule.RuleMetaData = {
 		messages: {
-			comment: `Don't use the term 'vs code' in comments`
+			comment: `Don't use the term 'TBS-IDE' in comments`
 		}
 	};
 
@@ -30,10 +30,10 @@ export = new class ApiVsCodeInComments implements eslint.Rule.RuleModule {
 					}
 
 					const startIndex = comment.range[0] + '/*'.length;
-					const re = /vs code/ig;
+					const re = /TBS-IDE/ig;
 					let match: RegExpExecArray | null;
 					while ((match = re.exec(comment.value))) {
-						// Allow using 'VS Code' in quotes
+						// Allow using 'TBS-IDE' in quotes
 						if (comment.value[match.index - 1] === `'` && comment.value[match.index + match[0].length] === `'`) {
 							continue;
 						}

@@ -23,7 +23,7 @@
 						},
 						"devPort": {
 							"type": "integer",
-							"description": "The port VS Code can use to connect to its backend."
+							"description": "The port TBS-IDE can use to connect to its backend."
 						}
 					}
 				}
@@ -48,7 +48,7 @@
 		},
 		"devPort": {
 			"type": "integer",
-			"description": "The port VS Code can use to connect to its backend.",
+			"description": "The port TBS-IDE can use to connect to its backend.",
 			"deprecated": true,
 			"deprecationMessage": "Use 'customizations/vscode/devPort' instead"
 		}

@@ -133,7 +133,7 @@ export class ClientCapabilities {
 export interface ITypeScriptServiceClient {
 
 	/**
-	 * Convert a (VS Code) resource to a path that TypeScript server understands.
+	 * Convert a (TBS-IDE) resource to a path that TypeScript server understands.
 	 */
 	toTsFilePath(resource: vscode.Uri): string | undefined;
 

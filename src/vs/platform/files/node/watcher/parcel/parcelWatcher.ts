@@ -447,7 +447,7 @@ export class ParcelWatcher extends Disposable implements IRecursiveWatcher {
 			if (event.type === FileChangeType.DELETED && event.path === watcher.request.path) {
 
 				// Explicitly exclude changes to root if we have any
-				// to avoid VS Code closing all opened editors which
+				// to avoid TBS-IDE closing all opened editors which
 				// can happen e.g. in case of network connectivity
 				// issues
 				// (https://github.com/microsoft/vscode/issues/136673)

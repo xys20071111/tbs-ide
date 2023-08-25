@@ -58,7 +58,7 @@
 			}
 		},
 		{
-			"label": "VS Code - Build",
+			"label": "TBS-IDE - Build",
 			"dependsOn": [
 				"Core - Build",
 				"Ext - Build"
@@ -94,7 +94,7 @@
 			"problemMatcher": "$tsc"
 		},
 		{
-			"label": "Kill VS Code - Build",
+			"label": "Kill TBS-IDE - Build",
 			"dependsOn": [
 				"Kill Core - Build",
 				"Kill Ext - Build"
@@ -103,21 +103,21 @@
 			"problemMatcher": []
 		},
 		{
-			"label": "Restart VS Code - Build",
+			"label": "Restart TBS-IDE - Build",
 			"dependsOn": [
-				"Kill VS Code - Build",
-				"VS Code - Build"
+				"Kill TBS-IDE - Build",
+				"TBS-IDE - Build"
 			],
 			"group": "build",
 			"dependsOrder": "sequence",
 			"problemMatcher": []
 		},
 		{
-			"label": "Kill VS Code - Build, Yarn, VS Code - Build",
+			"label": "Kill TBS-IDE - Build, Yarn, TBS-IDE - Build",
 			"dependsOn": [
-				"Kill VS Code - Build",
+				"Kill TBS-IDE - Build",
 				"npm: install",
-				"VS Code - Build"
+				"TBS-IDE - Build"
 			],
 			"group": "build",
 			"dependsOrder": "sequence",

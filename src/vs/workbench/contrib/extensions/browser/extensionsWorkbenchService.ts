@@ -375,7 +375,7 @@ ${this.description}
 		}
 
 		if (this.type === ExtensionType.System) {
-			return Promise.resolve('Please check the [VS Code Release Notes](command:update.showCurrentReleaseNotes) for changes to the built-in extensions.');
+			return Promise.resolve('Please check the [TBS-IDE Release Notes](command:update.showCurrentReleaseNotes) for changes to the built-in extensions.');
 		}
 
 		return Promise.reject(new Error('not available'));

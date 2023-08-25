@@ -101,7 +101,7 @@ export class PromptExtensionInstallFailureAction extends Action {
 		this.logService.error(this.error);
 
 		if (this.error.name === ExtensionManagementErrorCode.Unsupported) {
-			const productName = isWeb ? localize('VS Code for Web', "{0} for the Web", this.productService.nameLong) : this.productService.nameLong;
+			const productName = isWeb ? localize('TBS-IDE for Web', "{0} for the Web", this.productService.nameLong) : this.productService.nameLong;
 			const message = localize('cannot be installed', "The '{0}' extension is not available in {1}. Click 'More Information' to learn more.", this.extension.displayName || this.extension.identifier.id, productName);
 			const { confirmed } = await this.dialogService.confirm({
 				type: Severity.Info,
@@ -364,7 +364,7 @@ export class InstallAction extends ExtensionAction {
 					}
 				});
 			} else if (this.extension.deprecationInfo.settings) {
-				detail = localize('deprecated with alternate settings message', "This extension is deprecated as this functionality is now built-in to VS Code.");
+				detail = localize('deprecated with alternate settings message', "This extension is deprecated as this functionality is now built-in to TBS-IDE.");
 
 				const settings = this.extension.deprecationInfo.settings;
 				buttons.push({
@@ -2218,7 +2218,7 @@ export class ExtensionStatusAction extends ExtensionAction {
 				this.updateStatus({ icon: warningIcon, message: new MarkdownString(localize('deprecated with alternate extension tooltip', "This extension is deprecated. Use the {0} extension instead.", link)) }, true);
 			} else if (this.extension.deprecationInfo.settings) {
 				const link = `[${localize('settings', "settings")}](${URI.parse(`command:workbench.action.openSettings?${encodeURIComponent(JSON.stringify([this.extension.deprecationInfo.settings.map(setting => `@id:${setting}`).join(' ')]))}`)})`;
-				this.updateStatus({ icon: warningIcon, message: new MarkdownString(localize('deprecated with alternate settings tooltip', "This extension is deprecated as this functionality is now built-in to VS Code. Configure these {0} to use this functionality.", link)) }, true);
+				this.updateStatus({ icon: warningIcon, message: new MarkdownString(localize('deprecated with alternate settings tooltip', "This extension is deprecated as this functionality is now built-in to TBS-IDE. Configure these {0} to use this functionality.", link)) }, true);
 			} else {
 				const message = new MarkdownString(localize('deprecated tooltip', "This extension is deprecated as it is no longer being maintained."));
 				if (this.extension.deprecationInfo.additionalInfo) {
@@ -2242,7 +2242,7 @@ export class ExtensionStatusAction extends ExtensionAction {
 			}
 
 			if (this.extensionManagementServerService.webExtensionManagementServer) {
-				const productName = localize('VS Code for Web', "{0} for the Web", this.productService.nameLong);
+				const productName = localize('TBS-IDE for Web', "{0} for the Web", this.productService.nameLong);
 				const message = new MarkdownString(`${localize('not web tooltip', "The '{0}' extension is not available in {1}.", this.extension.displayName || this.extension.identifier.id, productName)} [${localize('learn why', "Learn Why")}](https://aka.ms/vscode-web-extensions-guide)`);
 				this.updateStatus({ icon: warningIcon, message }, true);
 				return;

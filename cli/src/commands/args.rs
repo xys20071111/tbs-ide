@@ -172,7 +172,7 @@ pub enum Commands {
 	/// Changes the version of the editor you're using.
 	Version(VersionArgs),
 
-	/// Runs a local web version of VS Code.
+	/// Runs a local web version of TBS-IDE.
 	ServeWeb(ServeWebArgs),
 
 	/// Runs the control server on process stdin/stdout

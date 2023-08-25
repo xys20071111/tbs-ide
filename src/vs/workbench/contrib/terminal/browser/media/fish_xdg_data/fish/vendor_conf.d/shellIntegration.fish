@@ -61,7 +61,7 @@ if set -q VSCODE_NONCE
 end
 
 # Helper function
-function __vsc_esc -d "Emit escape sequences for VS Code shell integration"
+function __vsc_esc -d "Emit escape sequences for TBS-IDE shell integration"
 	builtin printf "\e]633;%s\a" (string join ";" -- $argv)
 end
 

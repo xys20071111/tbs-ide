@@ -139,7 +139,7 @@ async function start() {
 		}
 
 		output += `Server bound to ${typeof address === 'string' ? address : `${address.address}:${address.port} (${address.family})`}\n`;
-		// Do not change this line. VS Code looks for this in the output.
+		// Do not change this line. TBS-IDE looks for this in the output.
 		output += `Extension host agent listening on ${typeof address === 'string' ? address : address.port}\n`;
 		console.log(output);
 

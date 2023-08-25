@@ -730,7 +730,7 @@ suite('TelemetryService', () => {
 
 		assert.strictEqual(service.telemetryLevel, TelemetryLevel.NONE);
 
-		telemetryLevel = TelemetryConfiguration.ON;
+		telemetryLevel = TelemetryConfiguration.OFF;
 		emitter.fire({ affectsConfiguration: () => true });
 		assert.strictEqual(service.telemetryLevel, TelemetryLevel.USAGE);
 

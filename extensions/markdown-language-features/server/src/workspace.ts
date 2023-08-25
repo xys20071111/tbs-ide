@@ -173,7 +173,7 @@ export class VsCodeClientWorkspace implements md.IWorkspaceWithWatching {
 			}
 
 			// Check that if file has been deleted on disk.
-			// This can happen when directories are renamed / moved. VS Code's file system watcher does not
+			// This can happen when directories are renamed / moved. TBS-IDE's file system watcher does not
 			// notify us when this happens.
 			if (!(await this.statBypassingCache(uri))) {
 				if (this._documentCache.get(uri) === doc && !doc.hasInMemoryDoc()) {

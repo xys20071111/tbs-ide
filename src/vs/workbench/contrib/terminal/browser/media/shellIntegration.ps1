@@ -127,7 +127,7 @@ if ($PSVersionTable.PSVersion -lt "6.0") {
 	[Console]::Write("$([char]0x1b)]633;P;IsWindows=$IsWindows`a")
 }
 
-# Set always on key handlers which map to default VS Code keybindings
+# Set always on key handlers which map to default TBS-IDE keybindings
 function Set-MappedKeyHandler {
 	param ([string[]] $Chord, [string[]]$Sequence)
 	try {
@@ -152,7 +152,7 @@ function Set-MappedKeyHandlers {
 	if ($env:VSCODE_SUGGEST -eq '1') {
 		Remove-Item Env:VSCODE_SUGGEST
 
-		# VS Code send completions request (may override Ctrl+Spacebar)
+		# TBS-IDE send completions request (may override Ctrl+Spacebar)
 		Set-PSReadLineKeyHandler -Chord 'F12,e' -ScriptBlock {
 			Send-Completions
 		}

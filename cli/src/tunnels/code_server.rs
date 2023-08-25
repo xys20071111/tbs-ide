@@ -154,7 +154,7 @@ pub struct ServerParamsRaw {
 	pub platform: Platform,
 }
 
-/// Server params that can be used to start a VS Code server.
+/// Server params that can be used to start a TBS-IDE server.
 pub struct ResolvedServerParams {
 	pub release: Release,
 	pub code_server_args: CodeServerArgs,
@@ -683,7 +683,7 @@ fn get_extensions_flag(extension_id: &str) -> String {
 	format!("--install-extension={}", extension_id)
 }
 
-/// A type that can be used to scan stdout from the VS Code server. Returns
+/// A type that can be used to scan stdout from the TBS-IDE server. Returns
 /// some other type that, in turn, is returned from starting the server.
 pub trait ServerOutputMatcher<R>
 where

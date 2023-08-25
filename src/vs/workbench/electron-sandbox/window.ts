@@ -705,7 +705,7 @@ export class NativeWindow extends Disposable {
 				// appRoot = /Applications/Visual Studio Code - Insiders.app/Contents/Resources/app
 				installLocationUri = dirname(dirname(dirname(URI.file(this.environmentService.appRoot))));
 			} else {
-				// appRoot = C:\Users\<name>\AppData\Local\Programs\Microsoft VS Code Insiders\resources\app
+				// appRoot = C:\Users\<name>\AppData\Local\Programs\Microsoft TBS-IDE Insiders\resources\app
 				// appRoot = /usr/share/code-insiders/resources/app
 				installLocationUri = dirname(dirname(URI.file(this.environmentService.appRoot)));
 			}

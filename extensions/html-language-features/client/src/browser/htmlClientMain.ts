@@ -17,7 +17,7 @@ declare const TextDecoder: {
 
 let client: AsyncDisposable | undefined;
 
-// this method is called when vs code is activated
+// this method is called when TBS-IDE is activated
 export async function activate(context: ExtensionContext) {
 	const serverMain = Uri.joinPath(context.extensionUri, 'server/dist/browser/htmlServerMain.js');
 	try {

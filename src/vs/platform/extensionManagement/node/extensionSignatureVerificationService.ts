@@ -19,7 +19,7 @@ export interface IExtensionSignatureVerificationService {
 	 * @param { string } signatureArchiveFilePath The signature archive file path.
 	 * @param { boolean } verbose A flag indicating whether or not to capture verbose detail in the event of an error.
 	 * @returns { Promise<boolean> } A promise with `true` if the extension is validly signed and trusted;
-	 * otherwise, `false` because verification is not enabled (e.g.:  in the OSS version of VS Code).
+	 * otherwise, `false` because verification is not enabled (e.g.:  in the OSS version of TBS-IDE).
 	 * @throws { ExtensionSignatureVerificationError } An error with a code indicating the validity, integrity, or trust issue
 	 * found during verification or a more fundamental issue (e.g.:  a required dependency was not found).
 	 */

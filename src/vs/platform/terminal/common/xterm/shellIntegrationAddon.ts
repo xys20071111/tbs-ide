@@ -46,7 +46,7 @@ const enum ShellIntegrationOscPs {
 	 */
 	FinalTerm = 133,
 	/**
-	 * Sequences pioneered by VS Code. The number is derived from the least significant digit of
+	 * Sequences pioneered by TBS-IDE. The number is derived from the least significant digit of
 	 * "VSC" when encoded in hex ("VSC" = 0x56, 0x53, 0x43).
 	 */
 	VSCode = 633,
@@ -59,13 +59,13 @@ const enum ShellIntegrationOscPs {
 }
 
 /**
- * VS Code-specific shell integration sequences. Some of these are based on more common alternatives
+ * TBS-IDE-specific shell integration sequences. Some of these are based on more common alternatives
  * like those pioneered in FinalTerm. The decision to move to entirely custom sequences was to try
  * to improve reliability and prevent the possibility of applications confusing the terminal. If
- * multiple shell integration scripts run, VS Code will prioritize the VS Code-specific ones.
+ * multiple shell integration scripts run, TBS-IDE will prioritize the TBS-IDE-specific ones.
  *
  * It's recommended that authors of shell integration scripts use the common sequences (eg. 133)
- * when building general purpose scripts and the VS Code-specific (633) when targeting only VS Code
+ * when building general purpose scripts and the TBS-IDE-specific (633) when targeting only TBS-IDE
  * or when there are no other alternatives.
  */
 const enum VSCodeOscPt {
@@ -255,7 +255,7 @@ export class ShellIntegrationAddon extends Disposable implements IShellIntegrati
 		}
 
 		// Pass the sequence along to the capability
-		// It was considered to disable the common protocol in order to not confuse the VS Code
+		// It was considered to disable the common protocol in order to not confuse the TBS-IDE
 		// shell integration if both happen for some reason. This doesn't work for powerlevel10k
 		// when instant prompt is enabled though. If this does end up being a problem we could pass
 		// a type flag through the capability calls

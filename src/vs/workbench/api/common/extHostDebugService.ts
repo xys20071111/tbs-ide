@@ -260,7 +260,7 @@ export abstract class ExtHostDebugServiceBase implements IExtHostDebugService, E
 			}
 		}
 
-		// send DTOs to VS Code
+		// send DTOs to TBS-IDE
 		return this._debugServiceProxy.$registerBreakpoints(dtos);
 	}
 
@@ -271,7 +271,7 @@ export abstract class ExtHostDebugServiceBase implements IExtHostDebugService, E
 		// send notification
 		this.fireBreakpointChanges([], breakpoints, []);
 
-		// unregister with VS Code
+		// unregister with TBS-IDE
 		const ids = breakpoints.filter(bp => bp instanceof SourceBreakpoint).map(bp => bp.id);
 		const fids = breakpoints.filter(bp => bp instanceof FunctionBreakpoint).map(bp => bp.id);
 		const dids = breakpoints.filter(bp => bp instanceof DataBreakpoint).map(bp => bp.id);
@@ -460,7 +460,7 @@ export abstract class ExtHostDebugServiceBase implements IExtHostDebugService, E
 							tracker.onDidSendMessage(message);
 						}
 
-						// DA -> VS Code
+						// DA -> TBS-IDE
 						message = convertToVSCPaths(message, true);
 
 						mythis._debugServiceProxy.$acceptDAMessage(debugAdapterHandle, message);
@@ -490,7 +490,7 @@ export abstract class ExtHostDebugServiceBase implements IExtHostDebugService, E
 
 	public $sendDAMessage(debugAdapterHandle: number, message: DebugProtocol.ProtocolMessage): void {
 
-		// VS Code -> DA
+		// TBS-IDE -> DA
 		message = convertToDAPaths(message, false);
 
 		const tracker = this._debugAdaptersTrackers.get(debugAdapterHandle);	// TODO@AW: same handle?

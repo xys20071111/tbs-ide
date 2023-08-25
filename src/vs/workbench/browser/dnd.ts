@@ -238,7 +238,7 @@ export function fillEditorsDragData(accessor: ServicesAccessor, resourcesOrEdito
 		}
 	}
 
-	// Resource URLs: allows to drop multiple file resources to a target in VS Code
+	// Resource URLs: allows to drop multiple file resources to a target in TBS-IDE
 	const files = fileSystemResources.filter(({ isDirectory }) => !isDirectory);
 	if (files.length) {
 		event.dataTransfer.setData(DataTransfers.RESOURCES, JSON.stringify(files.map(({ resource }) => resource.toString())));
@@ -348,7 +348,7 @@ export function fillEditorsDragData(accessor: ServicesAccessor, resourcesOrEdito
 
 		// Due to https://bugs.chromium.org/p/chromium/issues/detail?id=239745, we can only set
 		// a single uri for the real `text/uri-list` type. Otherwise all uris end up joined together
-		// However we write the full uri-list to an internal type so that other parts of VS Code
+		// However we write the full uri-list to an internal type so that other parts of TBS-IDE
 		// can use the full list.
 		event.dataTransfer.setData(Mimes.uriList, UriList.create(uriListEntries.slice(0, 1)));
 		event.dataTransfer.setData(DataTransfers.INTERNAL_URI_LIST, UriList.create(uriListEntries));

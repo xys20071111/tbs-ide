@@ -18,7 +18,7 @@ use crate::{
 	},
 };
 
-/// Implementation of the VS Code Update service for use in the CLI.
+/// Implementation of the TBS-IDE Update service for use in the CLI.
 #[derive(Clone)]
 pub struct UpdateService {
 	client: BoxedHttp,

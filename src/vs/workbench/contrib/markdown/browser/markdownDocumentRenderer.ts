@@ -186,7 +186,7 @@ function sanitize(documentContent: string, allowUnknownProtocols: boolean): stri
 /**
  * Renders a string of markdown as a document.
  *
- * Uses VS Code's syntax highlighting code blocks.
+ * Uses TBS-IDE's syntax highlighting code blocks.
  */
 export async function renderMarkdownDocument(
 	text: string,

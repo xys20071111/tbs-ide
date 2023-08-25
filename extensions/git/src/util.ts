@@ -283,7 +283,7 @@ export function detectUnicodeEncoding(buffer: Buffer): Encoding | null {
 
 function normalizePath(path: string): string {
 	// Windows & Mac are currently being handled
-	// as case insensitive file systems in VS Code.
+	// as case insensitive file systems in TBS-IDE.
 	if (isWindows || isMacintosh) {
 		return path.toLowerCase();
 	}

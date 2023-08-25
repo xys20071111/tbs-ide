@@ -136,6 +136,6 @@ export namespace TerminalContextKeys {
 	/** Whether the terminal run command picker is currently open. */
 	export const inTerminalRunCommandPicker = new RawContextKey<boolean>(TerminalContextKeyStrings.InTerminalRunCommandPicker, false, localize('inTerminalRunCommandPickerContextKey', "Whether the terminal run command picker is currently open."));
 
-	/** Whether shell integration is enabled in the active terminal. This only considers full VS Code shell integration. */
+	/** Whether shell integration is enabled in the active terminal. This only considers full TBS-IDE shell integration. */
 	export const terminalShellIntegrationEnabled = new RawContextKey<boolean>(TerminalContextKeyStrings.TerminalShellIntegrationEnabled, false, localize('terminalShellIntegrationEnabled', "Whether shell integration is enabled in the active terminal"));
 }

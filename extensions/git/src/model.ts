@@ -255,7 +255,7 @@ export class Model implements IBranchProtectionProviderRegistry, IRemoteSourcePu
 	/**
 	 * We maintain a map containing both the path and the canonical path of the
 	 * workspace folders. We are doing this as `git.exe` expands the symbolic links
-	 * while there are scenarios in which VS Code does not.
+	 * while there are scenarios in which TBS-IDE does not.
 	 *
 	 * Key   - path of the workspace folder
 	 * Value - canonical path of the workspace folder

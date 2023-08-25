@@ -1,5 +1,5 @@
 {
-	"name": "Code - OSS with X11/Wayland",
+	"name": "TBS-IDE with X11/Wayland",
 	"build": {
 		"dockerfile": "Dockerfile"
 	},
